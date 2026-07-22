@@ -1,6 +1,6 @@
 #include <iostream>
 
-int queue[10];
+int arr_queue[10];
 int front = 0;
 int rear = 0;
 
@@ -8,7 +8,7 @@ void Enque(int x) {
     if (rear == 10) {
         std::cout << "\nOverflow";
     } else {
-        queue[rear++] = x;
+        arr_queue[rear++] = x;
     }
 }
 
@@ -18,9 +18,9 @@ void Deque() {
     }
 
     else {
-        std::cout << "\n" << queue[front++] << " deleted";
+        std::cout << "\n" << arr_queue[front++] << " deleted";
         for (int i = front; i < rear; i++) {
-            queue[i - front] = queue[i];
+           arr_queue[i - front] = arr_queue[i];
         }
         rear = rear - front;
         front = 0;
@@ -29,7 +29,7 @@ void Deque() {
 
 void show() {
     for (int i = front; i < rear; i++) {
-        std::cout << queue[i] << "\t";
+        std::cout <<arr_queue[i] << "\t";
     }
 }
 
