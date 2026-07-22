@@ -20,7 +20,7 @@ void Deque() {
     else {
         std::cout << "\n" << arr_queue[front++] << " deleted";
         for (int i = front; i < rear; i++) {
-           arr_queue[i - front] = arr_queue[i];
+            arr_queue[i - front] = arr_queue[i];
         }
         rear = rear - front;
         front = 0;
@@ -29,7 +29,7 @@ void Deque() {
 
 void show() {
     for (int i = front; i < rear; i++) {
-        std::cout <<arr_queue[i] << "\t";
+        std::cout << arr_queue[i] << "\t";
     }
 }
 
